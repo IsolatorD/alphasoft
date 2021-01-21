@@ -40,7 +40,13 @@
     </v-row>
     <v-row id="nosotros" class="pt-12">
       <v-col
-        cols="6"
+        cols="12"
+        xl="6"
+        lg="6"
+        md="6"
+        sm="12"
+        xs="12"
+
       >
         <img
           src="../assets/img/13.jpeg"
@@ -49,7 +55,13 @@
         >
       </v-col>
       <v-col
-        cols="6"
+        cols="12"
+        xl="6"
+        lg="6"
+        md="6"
+        sm="12"
+        xs="12"
+
         class="px-12 d-flex align-center"
       >
         <v-row>
@@ -68,11 +80,16 @@
     </v-row>
     <v-row id="services" class="py-12 my-12">
       <v-col
-        cols="6"
+        cols="12"
+        xl="6"
+        lg="6"
+        md="6"
+        sm="12"
+        xs="12"
         class="pl-12 d-flex align-center"
       >
         <v-row>
-          <v-col cols="12 px-12">
+          <v-col cols="12">
             <p class="headline font-weight-bold">
               Desarrollamos productos de calidad
             </p>
@@ -104,7 +121,12 @@
         </v-row>
       </v-col>
        <v-col
-        cols="6"
+        cols="12"
+        xl="6"
+        lg="6"
+        md="6"
+        sm="12"
+        xs="12"
       >
         <img
           src="../assets/img/20.png"
@@ -114,7 +136,9 @@
        </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12" class="">
+      <v-col
+        cols="12"
+      >
         <v-row>
           <v-col cols="12" class="d-flex justify-center py-0">
             <h2>Lo que podemos hacer</h2>
@@ -124,10 +148,18 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="12" class="d-flex justify-center">
+      <v-col
+        cols="12"
+        class="d-flex justify-center"
+      >
         <v-row justify="center">
           <v-col
-            cols="5"
+            cols="12"
+            xl="5"
+            lg="5"
+            md="5"
+            sm="12"
+            xs="12"
             v-for="(option, i) in options"
             :key="i"
           >
@@ -161,7 +193,15 @@
       </v-col>
     </v-row>
     <v-row id="contacto" class="py-12 mt-5">
-      <v-col cols="6" class="d-flex align-center">
+      <v-col
+        cols="12"
+        xl="6"
+        lg="6"
+        md="6"
+        sm="12"
+        xs="12"
+        class="d-flex align-center"
+      >
         <v-row>
           <v-col cols="12" class="d-flex justify-center py-0">
             <h2>Contacta con nosotros</h2>
@@ -178,8 +218,16 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols="6" class="d-flex justify-center">
-        <v-card outlined width="70%">
+      <v-col
+        cols="12"
+        xl="6"
+        lg="6"
+        md="6"
+        sm="12"
+        xs="12"
+        class="d-flex justify-center"
+      >
+        <v-card outlined width="80%">
           <v-card-title>
             <span class="headline">Contactanos</span>
           </v-card-title>

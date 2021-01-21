@@ -19,6 +19,16 @@ const routes = [
     path: '/blog',
     name: 'Blog',
     component: () => import(/* webpackChunkName: "about" */ '../views/Blog.vue')
+  },
+  {
+    path: '/blog/glosario',
+    name: 'glosario',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Glosario.vue')
+  },
+  {
+    path: '/blog/teoria_aprendizaje',
+    name: 'teoria_aprendizaje',
+    component: () => import(/* webpackChunkName: "about" */ '../views/TeoriaAprendizaje.vue')
   }
 ]
 
