@@ -6,9 +6,17 @@
       dark
     >
       <div class="d-flex align-center">
-        <span class="headline font-weight-medium">
+          <!-- class="shrink mr-2" -->
+        <v-img
+          alt="logo"
+          contain
+          :src="require('./assets/img/logo.jpeg')"
+          width="145px"
+        />
+          <!-- transition="scale-transition" -->
+        <!-- <span class="headline font-weight-medium">
           Alphasoft
-        </span>
+        </span> -->
       </div>
 
       <v-spacer></v-spacer>

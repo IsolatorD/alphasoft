@@ -10,7 +10,13 @@
           sm="12"
           xs="12"
         >
-          <h1>LOGO</h1>
+          <v-img
+            alt="logo"
+            contain
+            :src="require('../assets/img/logo.jpeg')"
+            width="200px"
+            class="mb-4"
+          />
           <span class="white--text py-2">
             Somos una empresa de desarrollo de software que trabaja con inteligencia y esfuerzo. Nuestro objetivo es ofrecer servicios de calidad que cumplan con los requerimientos de nuestros clientes, contribuyendo al crecimiento y mejora de su productividad.
           </span>
