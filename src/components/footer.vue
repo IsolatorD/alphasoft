@@ -13,7 +13,7 @@
           <v-img
             alt="logo"
             contain
-            :src="require('../assets/img/logo.jpeg')"
+            :src="require('../assets/img/logo4.png')"
             width="200px"
             class="mb-4"
           />

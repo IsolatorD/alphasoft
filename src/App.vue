@@ -7,12 +7,12 @@
     >
       <div class="d-flex align-center">
           <!-- class="shrink mr-2" -->
-        <v-img
+          <!-- contain -->
+        <img
           alt="logo"
-          contain
-          :src="require('./assets/img/logo.jpeg')"
+          :src="require('./assets/img/logo4.png')"
           width="145px"
-        />
+        >
           <!-- transition="scale-transition" -->
         <!-- <span class="headline font-weight-medium">
           Alphasoft
