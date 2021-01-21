@@ -1,32 +1,74 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app>
+    <v-app-bar
+      app
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <span class="headline font-weight-medium">
+          Alphasoft
+        </span>
+      </div>
+
+      <v-spacer></v-spacer>
+
+      <v-btn
+        to="/"
+        class="py-8"
+        text
+      >
+        <span class="mr-2">Inicio</span>
+      </v-btn>
+      <v-btn
+        to="/about"
+        class="py-8"
+        text
+      >
+        <span class="mr-2">Sobre Nosotros</span>
+      </v-btn>
+      <v-btn
+        to="/blog"
+        class="py-8"
+        text
+      >
+        <span class="mr-2">Blog</span>
+      </v-btn>
+      <!-- <v-btn
+        class="py-8"
+        text
+      >
+        <span class="mr-2">Contactanos</span>
+      </v-btn> -->
+    </v-app-bar>
+
+    <v-main>
+      <transition name="fade">
+        <router-view/>
+      </transition>
+    </v-main>
+  </v-app>
 </template>
 
+<script>
+export default {
+  name: 'App'
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+html {
+  scroll-behavior: smooth;
 }
 
-#nav {
-  padding: 30px;
+.title-init {
+  font-size: 2.5rem;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
