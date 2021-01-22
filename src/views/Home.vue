@@ -192,6 +192,41 @@
         </v-row>
       </v-col>
     </v-row>
+    <v-row id="empresas" class="py-12 mt-5">
+      <v-col
+        cols="12"
+        class="d-flex align-center pb-12"
+      >
+        <v-row>
+          <v-col cols="12" class="d-flex justify-center py-0">
+            <h2>Comentarios de nuestros clientes</h2>
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col
+        cols="12"
+      >
+        <v-row>
+          <v-col cols="12">
+            <ComentaryCardV2
+              :data="comentaries"
+            />
+          </v-col>
+          <!-- <v-col
+            cols="6"
+            v-for="(com, i) in comentaries"
+            :key="i"
+          >
+            <ComentaryCard
+              :companyName="com.companyName"
+              :username="com.username"
+              :userOcupation="com.userOcupation"
+              :comentary="com.comentary"
+            />
+          </v-col> -->
+        </v-row>
+      </v-col>
+    </v-row>
     <v-row id="contacto" class="py-12 mt-5">
       <v-col
         cols="12"
@@ -279,16 +314,50 @@
 </template>
 
 <script>
+// import ComentaryCard from '@/components/ComentaryCard'
+import ComentaryCardV2 from '@/components/ComentaryCardV2'
 import Footer from '@/components/footer'
 export default {
   name: 'Home',
-  components: {Footer},
+  components: {ComentaryCardV2, Footer},
   data: () => ({
     options: [
       {color: 'green', icon: 'mdi-android', name: 'Aplicaciones Moviles', description: 'Desarrollamos aplicaciones multiplataforma, rapidas y seguras.'},
       {color: 'grey', icon: 'mdi-application-cog', name: 'Aplicaciones Web', description: 'Aplicaciones web para la gestión de contenidos, clientes, productos.'},
       {color: 'grey', icon: 'mdi-open-in-app', name: 'Landing Pages', description: 'Impresionantes paginas de bienvenida y presentación de tu producto o marca.'},
       {color: 'primary', icon: 'mdi-bullhorn', name: 'Soporte de sistemas', description: 'Soporte personalizado para tus herramientas de trabajo.'}
+    ],
+    comentaries: [
+      {
+        companyName: 'Conexiones PTP C.A',
+        username: 'Angel Martinez',
+        userOcupation: 'Lider de servicio',
+        comentary: 'Excelente Servicio. Alphasoft tuvo en cuenta todas las necesidades de nuestra compañía y proporciono las soluciones adecuadas.'
+      },
+      {
+        companyName: 'Panadería y Charcutería “Café con Pan”',
+        username: 'Jhon Rivas',
+        userOcupation: 'Dueño',
+        comentary: 'Su servicio técnico es comprensivo y amigable para personas poco familiarizadas con las computadoras. Recomendado.'
+      },
+      {
+        companyName: 'Comercializadora la "M" C.A',
+        username: 'Angel Perez',
+        userOcupation: 'Gerente',
+        comentary: 'Mi negocio ha crecido mucho desde que contrate los servicios de Alphasoft, ahora implementamos canales digitales de ventas junto a un sistema de entregas a domicilio. Lo que ha llevado a aumentar nuestros clientes y ventas.'
+      },
+      {
+        companyName: 'Verduras La Gracia de Dios C.A',
+        username: 'Zunilda Belisario',
+        userOcupation: 'Gerente',
+        comentary: 'Antes de contratar los servicios de Alphasoft mi negocio presentaba problemas administrativos en materia de control de ventas y control de mercancía (stock), pero después gracias a los servicios de Alphasoft y a su excelente trabajo, mi negocio ahora esta mas organizado, con una mejora significativa en la administración gracias a los sistemas administrativos proporcionados por Alphasoft'
+      },
+      {
+        companyName: 'PC’s Innovaciones C.A',
+        username: 'Miguel Santodomingo',
+        userOcupation: 'Lider de Servicio',
+        comentary: 'Excelente Servicio, atención de primera y muy atentos!'
+      }
     ]
   })
 }

@@ -52,6 +52,11 @@
           </div>
        </v-col>
      </v-row>
+     <v-row class="py-12">
+      <v-col cols="12">
+        <div class="fb-comments" :data-href="url" data-width="100%" data-numposts="10"></div>
+      </v-col>
+    </v-row>
     <Footer />
   </v-container>
 </template>
@@ -60,8 +65,10 @@
 import Footer from '@/components/footer'
 export default {
   name: 'TeoriaAprendizaje',
-  components: { Footer }
-
+  components: { Footer },
+  data: () => ({
+    url: window.location.href
+  })
 }
 </script>
 
